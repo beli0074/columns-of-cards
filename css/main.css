@@ -2,10 +2,21 @@ html {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
+  background-color: #f2f2f2;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h3 {
+  font-style: bold;
+  font-size: 1rem;
 }
 
 .cards {
@@ -14,19 +25,23 @@ html {
   list-style-type: none;
   text-align: center;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .cards li {
   display: inline-block;
-  background-color: #f2f2f2;
-  border: 2px solid #333;
+  border: 1px solid #333;
+  border-top: none;
+  border-bottom: none;
   text-align: left;
   padding: .75rem;
 }
-.cards img {
+img {
   display: block;
   margin: 0 auto 1.5rem;
-  max-width: 100px;
+  width: 100px;
 }
 
 .cards strong {
@@ -36,11 +51,11 @@ html {
 
 .cards dl {
   margin: 0;
+  margin-bottom: 2rem;
 }
 
 .cards dt {
   font-style: italic;
-  font-size: .875rem;
 }
 
 .cards dd {
@@ -48,6 +63,29 @@ html {
   display: block;
   margin: 0;
   font-size: .875rem;
+}
+.none {
+  background-color: #e2e2e2;
+  flex-grow: 1;
+  width: 25%;
+}
+
+.light {
+  background-color: #ccc;
+  flex-grow: 1;
+  width: 25%;
+}
+
+.medium {
+  background-color: #aaa;
+  flex-grow: 1;
+  width: 25%;
+}
+
+.dark {
+  background-color: #999;
+  flex-grow: 1;
+  width: 25%;
 }
 
 .btn {
@@ -59,10 +97,12 @@ html {
   border-color: #333;
   display: inline-block;
   padding: .4em .75em .3em;
-  font-size: .875rem;
   color: #fff;
   width: 100%;
-  margin-top: 1.5rem;
+}
+
+.btn-small {
+  font-size: .875rem;
 }
 
 .btn:hover {
